@@ -1,0 +1,55 @@
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      padding: 10px;
+      border: 2px solid gray;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: border-color 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+        border-color: blue;
+      }
+
+      &:invalid {
+        border-color: red;
+      }
+    }
+
+    .error-msg {
+      color: red;
+      font-size: 12px;
+      display: none;
+    }
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darkblue;
+    }
+  }
+}

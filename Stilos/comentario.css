@@ -1,0 +1,51 @@
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#comment-form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+#comment-form div label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#comment-form div input,
+#comment-form div textarea {
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+#comment-form div input:focus,
+#comment-form div textarea:focus {
+  outline: none;
+  border-color: blue;
+}
+#comment-form div input:invalid,
+#comment-form div textarea:invalid {
+  border-color: red;
+}
+#comment-form div .error-msg {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+#comment-form button[type=submit] {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+#comment-form button[type=submit]:hover {
+  background-color: darkblue;
+}
+
+/*# sourceMappingURL=comentario.css.map */
