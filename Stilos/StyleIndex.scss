@@ -1,0 +1,80 @@
+// Estilos comunes
+$primary-color: #007bff;
+$secondary-color: #fff;
+$max-width: 800px;
+$margin: 0 auto;
+$padding: 50px;
+$border-radius: 10px;
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+body {
+  background-color: #eee;
+}
+
+.info-section {
+  background-color: $secondary-color;
+  max-width: $max-width;
+  margin: $margin;
+  padding: $padding;
+  text-align: center;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  // Estilos para pantallas pequeñas
+  @media (max-width: 767px) {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+
+  // Estilos para pantallas pequeñas
+  @media (max-width: 767px) {
+    font-size: 36px;
+  }
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+
+  // Estilos para pantallas pequeñas
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
+}
+
+pre {
+  color: rgb(5, 0, 0);
+  font-size: 18px;
+
+  // Estilos para pantallas pequeñas
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.button-primary {
+  background-color: $primary-color;
+  border: none;
+  color: $secondary-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  // Estilos para pantallas pequeñas
+  @media (max-width: 767px) {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+.button-primary:hover {
+  background-color: darken($primary-color, 10%);
+}
