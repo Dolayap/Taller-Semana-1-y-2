@@ -11,7 +11,7 @@ function obtenerClima() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "20bf7abe7emsh0b3e787efa9e3dcp1efdcdjsnd9e1e6c4946f",
+        "X-RapidAPI-Key": "a479ba5c53msh581bf18a3eca336p14f0b1jsnf495ba20c0d5",
         "X-RapidAPI-Host": "open-weather13.p.rapidapi.com",
       },
     };
