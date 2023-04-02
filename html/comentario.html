@@ -11,6 +11,9 @@
   <body>
     <form id="comment-form">
       <h2>Comentarios</h2>
+      <button class="button-primary" onclick="location.href='clima.html'">
+        Volver a consulta tiempo
+      </button>
       <div>
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required />
@@ -31,7 +34,6 @@
         <textarea id="comment" name="comment" required></textarea>
         <span class="error-msg">Campo obligatorio</span>
       </div>
-      <button type="submit">Enviar comentario</button>
     </form>
     <div class="botones-container">
       <button id="agregar-btn">Agregar comentario</button>

@@ -1,42 +1,61 @@
+@charset "UTF-8";
 #comment-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+}
+#comment-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 #comment-form div {
   display: flex;
   flex-direction: column;
+  justify-content: center; /* Agregamos esta propiedad para centrar verticalmente */
+  align-items: center; /* Agregamos esta propiedad para centrar horizontalmente */
   margin-bottom: 20px;
+  max-width: 400px; /* Agregamos esta propiedad para limitar el ancho máximo a 400px */
+  width: 100%;
 }
-#comment-form div label {
+#comment-form label {
   font-weight: bold;
   margin-bottom: 5px;
 }
-#comment-form div input,
-#comment-form div textarea {
+#comment-form input,
+#comment-form textarea {
   padding: 10px;
-  border: 2px solid gray;
+  border: 2px solid #ced4da;
   border-radius: 5px;
   font-size: 16px;
   transition: border-color 0.3s ease-in-out;
+  max-width: 400px;
 }
-#comment-form div input:focus,
-#comment-form div textarea:focus {
+#comment-form input:focus,
+#comment-form textarea:focus {
   outline: none;
-  border-color: blue;
+  border-color: #007bff;
 }
-#comment-form div input:invalid,
-#comment-form div textarea:invalid {
-  border-color: red;
+#comment-form input:invalid,
+#comment-form textarea:invalid {
+  border-color: #dc3545;
 }
-#comment-form div .error-msg {
-  color: red;
+#comment-form .error-msg {
+  color: #dc3545;
   font-size: 12px;
   display: none;
+  margin-top: 5px;
 }
-#comment-form button[type=submit] {
+
+.botones-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.botones-container button {
   padding: 10px 20px;
-  background-color: blue;
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -44,8 +63,23 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-#comment-form button[type=submit]:hover {
-  background-color: darkblue;
+.botones-container button:not(:last-child) {
+  margin-right: 10px;
+}
+.botones-container button:hover {
+  background-color: #0062cc;
+}
+.botones-container button.editar-btn {
+  background-color: #ffc107;
+}
+.botones-container button.editar-btn:hover {
+  background-color: #d39e00;
+}
+.botones-container button.eliminar-btn {
+  background-color: #dc3545;
+}
+.botones-container button.eliminar-btn:hover {
+  background-color: #bd2130;
 }
 
 /*# sourceMappingURL=comentario.css.map */

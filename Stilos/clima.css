@@ -19,6 +19,20 @@
 .contenedor .boton-salir:hover {
   background-color: #555;
 }
+.contenedor .boton-comentario {
+  position: absolute;
+  top: 10px;
+  left: 650px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.contenedor .boton-comentario:hover {
+  background-color: #555;
+}
 .contenedor pre {
   color: rgb(7, 0, 0);
   font-size: 14px;

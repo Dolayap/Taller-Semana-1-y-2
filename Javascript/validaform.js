@@ -19,6 +19,16 @@ agregarBtn.addEventListener("click", () => {
   const telefonoInput = document.querySelector("#phone");
   const comentarioInput = document.querySelector("#comment");
 
+  if (
+    !nombreInput.value ||
+    !correoInput.value ||
+    !telefonoInput.value ||
+    !comentarioInput.value
+  ) {
+    alert("Por favor complete todos los campos requeridos.");
+    return;
+  }
+
   const comentario = new Comentario(
     comentarioInput.value,
     nombreInput.value,
@@ -37,6 +47,16 @@ editarBtn.addEventListener("click", () => {
   const telefonoInput = document.querySelector("#phone");
   const comentarioInput = document.querySelector("#comment");
 
+  if (
+    !nombreInput.value ||
+    !correoInput.value ||
+    !telefonoInput.value ||
+    !comentarioInput.value
+  ) {
+    alert("Por favor complete todos los campos requeridos.");
+    return;
+  }
+
   alert(
     `Se ha editado el comentario:\n\nNombre: ${nombreInput.value}\nCorreo: ${correoInput.value}\nTeléfono: ${telefonoInput.value}\nComentario: ${comentarioInput.value}`
   );
@@ -48,9 +68,20 @@ eliminarBtn.addEventListener("click", () => {
   const telefonoInput = document.querySelector("#phone");
   const comentarioInput = document.querySelector("#comment");
 
+  if (
+    !nombreInput.value ||
+    !correoInput.value ||
+    !telefonoInput.value ||
+    !comentarioInput.value
+  ) {
+    alert("Por favor complete todos los campos requeridos.");
+    return;
+  }
+
   alert(
     `Se ha eliminado el comentario:\n\nNombre: ${nombreInput.value}\nCorreo: ${correoInput.value}\nTeléfono: ${telefonoInput.value}\nComentario: ${comentarioInput.value}`
   );
+
   //limpieza de los campos
   nombreInput.value = "";
   correoInput.value = "";

@@ -1,46 +1,69 @@
+$primary-color: #007bff; // Color primario azul
+$danger-color: #dc3545; // Color de peligro rojo
+$warning-color: #ffc107; // Color de advertencia amarillo
+
 #comment-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
 
   div {
     display: flex;
     flex-direction: column;
+    justify-content: center; /* Agregamos esta propiedad para centrar verticalmente */
+    align-items: center; /* Agregamos esta propiedad para centrar horizontalmente */
     margin-bottom: 20px;
+    max-width: 400px; /* Agregamos esta propiedad para limitar el ancho máximo a 400px */
+    width: 100%;
+  }
 
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+    max-width: 400px;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
     }
 
-    input,
-    textarea {
-      padding: 10px;
-      border: 2px solid gray;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: border-color 0.3s ease-in-out;
-
-      &:focus {
-        outline: none;
-        border-color: blue;
-      }
-
-      &:invalid {
-        border-color: red;
-      }
-    }
-
-    .error-msg {
-      color: red;
-      font-size: 12px;
-      display: none;
+    &:invalid {
+      border-color: $danger-color;
     }
   }
 
-  button[type="submit"] {
+  .error-msg {
+    color: $danger-color;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+  }
+}
+
+.botones-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  button {
     padding: 10px 20px;
-    background-color: blue;
+    background-color: $primary-color;
     color: white;
     border: none;
     border-radius: 5px;
@@ -48,8 +71,28 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
     &:hover {
-      background-color: darkblue;
+      background-color: darken($primary-color, 10%);
+    }
+
+    &.editar-btn {
+      background-color: $warning-color;
+
+      &:hover {
+        background-color: darken($warning-color, 10%);
+      }
+    }
+
+    &.eliminar-btn {
+      background-color: $danger-color;
+
+      &:hover {
+        background-color: darken($danger-color, 10%);
+      }
     }
   }
 }

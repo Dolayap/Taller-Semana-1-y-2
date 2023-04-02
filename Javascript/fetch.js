@@ -40,9 +40,7 @@ function obtenerClima() {
         const pressureValue = document.createElement("p");
         const maxtempValue = document.createElement("p");
 
-        const mainValue = document.createElement("p");
         const descValue = document.createElement("p");
-        const iconValue = document.createElement("p");
 
         const latValue = document.createElement("p");
         const lonValue = document.createElement("p");
@@ -56,17 +54,15 @@ function obtenerClima() {
         mintempValue.textContent = `La temperatura minima sera de ${temp_min}°F`;
         maxtempValue.textContent = `La temperatura maxima sera de ${temp_max}°F`;
         tempValue.textContent = `Temperatura actual: ${temp}°F`;
-        pressureValue.textContent = `Presion actual: ${pressure}`;
+        pressureValue.textContent = `Presion actual: ${pressure}Psi`;
 
-        mainValue.textContent = `Clima: ${description}`;
         descValue.textContent = `Descripción: ${description}`;
-        iconValue.textContent = `Icono: ${description}`;
 
         latValue.textContent = `Latitud: ${lat}`;
         lonValue.textContent = `Longitud: ${lon}`;
 
         speedValue.textContent = `Velocidad del viento: ${speed}km`;
-        degValue.textContent = `Direccion del viento: ${deg}`;
+        degValue.textContent = `Direccion del viento: ${deg}°`;
         gustValue.textContent = `Rafaga: ${gust}`;
 
         // Agregar elementos al contenedor HTML
@@ -75,9 +71,9 @@ function obtenerClima() {
         contenidoSuperpuesto.appendChild(mintempValue);
         contenidoSuperpuesto.appendChild(maxtempValue);
         contenidoSuperpuesto.appendChild(pressureValue);
-        contenidoSuperpuesto.appendChild(mainValue);
+
         contenidoSuperpuesto.appendChild(descValue);
-        contenidoSuperpuesto.appendChild(iconValue);
+
         contenidoSuperpuesto.appendChild(latValue);
         contenidoSuperpuesto.appendChild(lonValue);
         contenidoSuperpuesto.appendChild(speedValue);

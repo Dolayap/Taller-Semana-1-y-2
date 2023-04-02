@@ -21,6 +21,22 @@
     }
   }
 
+  .boton-comentario {
+    position: absolute;
+    top: 10px;
+    left: 650px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+
   pre {
     color: rgb(7, 0, 0);
     font-size: 14px;
